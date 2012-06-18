@@ -32,6 +32,7 @@
         <dc:creator xml:lang="en">Qin Sun</dc:creator>
         <dc:description xml:lang="en">The Ontology for Energy Investigations (OEI) is an effort to provide a resource for annotating investigations in Energy Informatics.</dc:description>
         <dc:creator xml:lang="en">Zhengkai Wu</dc:creator>
+        <owl:imports rdf:resource="&obo;iao.owl"/>
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
@@ -1279,6 +1280,78 @@ level of radioactivity is_proxy_for level of toxicity</obo:IAO_0000112>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_device -->
+
+    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_device">
+        <rdfs:label xml:lang="en">electricity generation device</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function -->
+
+    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function">
+        <rdfs:label xml:lang="en">electricity generation function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_device -->
+
+    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_device">
+        <rdfs:label xml:lang="en">energy generation device</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000968"/>
+    </owl:Class>
+    
+
+
+    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function -->
+
+    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function">
+        <rdfs:label xml:lang="en">energy generation function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_device -->
+
+    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_device">
+        <rdfs:label xml:lang="en">photovoltaic conversion device</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_function -->
+
+    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_function">
+        <rdfs:label xml:lang="en">photovoltaic conversion function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function"/>
+    </owl:Class>
     
 
 
