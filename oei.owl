@@ -1347,6 +1347,7 @@ level of radioactivity is_proxy_for level of toxicity</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">A photovoltaic conversion device transforms sunlight directly into electrical energy.
 
 A solar cell or photovoltaic cell is a wide area electronic device that converts solar energy into electricity by the photovoltaic effect. Photovoltaics is the field of technology and research related to the application of solar cells as solar energy.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">photovoltaic cell</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">solar cell</obo:IAO_0000118>
     </owl:Class>
@@ -1358,6 +1359,8 @@ A solar cell or photovoltaic cell is a wide area electronic device that converts
     <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_function">
         <rdfs:label xml:lang="en">photovoltaic conversion function</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function"/>
+        <obo:IAO_0000115 xml:lang="en">A function that converts solar energy into electricity by the photovoltaic effect.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
     </owl:Class>
     
 
