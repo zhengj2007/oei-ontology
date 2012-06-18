@@ -1299,6 +1299,7 @@ level of radioactivity is_proxy_for level of toxicity</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">Electricity generation devices includes all technologies that turn some form of energy into useful electric energy.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell
 </obo:IAO_0000117>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
         <rdfs:seeAlso rdf:resource="&reegle;622.rdf"/>
     </owl:Class>
     
@@ -1309,6 +1310,7 @@ level of radioactivity is_proxy_for level of toxicity</obo:IAO_0000112>
     <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function">
         <rdfs:label xml:lang="en">electricity generation function</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function"/>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -1324,6 +1326,7 @@ level of radioactivity is_proxy_for level of toxicity</obo:IAO_0000112>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000968"/>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -1333,6 +1336,7 @@ level of radioactivity is_proxy_for level of toxicity</obo:IAO_0000112>
     <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function">
         <rdfs:label xml:lang="en">energy generation function</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Function"/>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -1355,6 +1359,7 @@ A solar cell or photovoltaic cell is a wide area electronic device that converts
         <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">photovoltaic cell</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">solar cell</obo:IAO_0000118>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000119 rdf:resource="&reegle;39.rdf"/>
     </owl:Class>
     
@@ -1367,6 +1372,7 @@ A solar cell or photovoltaic cell is a wide area electronic device that converts
         <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function"/>
         <obo:IAO_0000115 xml:lang="en">A function that converts solar energy into electricity by the photovoltaic effect.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
