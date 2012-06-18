@@ -1295,6 +1295,11 @@ level of radioactivity is_proxy_for level of toxicity</obo:IAO_0000112>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_device"/>
+        <obo:IAO_0000119 rdf:datatype="&xsd;anyURI">http://www.reegle.info/glossary/622/electricity-generation.htm</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">Electricity generation devices includes all technologies that turn some form of energy into useful electric energy.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell
+</obo:IAO_0000117>
+        <rdfs:seeAlso rdf:resource="&reegle;622.rdf"/>
     </owl:Class>
     
 
@@ -1343,13 +1348,14 @@ level of radioactivity is_proxy_for level of toxicity</obo:IAO_0000112>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_device"/>
-        <obo:IAO_0000119 rdf:datatype="&xsd;anyURI">http://reegle.info/glossary/39</obo:IAO_0000119>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.reegle.info/glossary/39</rdfs:seeAlso>
         <obo:IAO_0000115 xml:lang="en">A photovoltaic conversion device transforms sunlight directly into electrical energy.
 
 A solar cell or photovoltaic cell is a wide area electronic device that converts solar energy into electricity by the photovoltaic effect. Photovoltaics is the field of technology and research related to the application of solar cells as solar energy.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">photovoltaic cell</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">solar cell</obo:IAO_0000118>
+        <obo:IAO_0000119 rdf:resource="&reegle;39.rdf"/>
     </owl:Class>
     
 
