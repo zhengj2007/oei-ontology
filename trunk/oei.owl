@@ -25,7 +25,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
      xmlns:reegle="http://reegle.info/glossary/">
-    <owl:Ontology rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl">
+    <owl:Ontology rdf:about="http://purl.org/oei/devel/owl">
         <dc:creator xml:lang="en">Aaron Beach</dc:creator>
         <dc:subject xml:lang="en">An ontology for the annotation of investigations related to Energy Informatics.</dc:subject>
         <dc:creator xml:lang="en">Jie Zheng</dc:creator>
@@ -481,12 +481,12 @@ EquivalentTo: xsd:integer[&gt; 2151 , &lt;= 2300]
         <rdfs:domain rdf:resource="&obo;BFO_0000007"/>
         <owl:inverseOf rdf:resource="&obo;BFO_0000067"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000066"/>
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000066"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
             <rdf:Description rdf:about="&obo;BFO_0000066"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -1281,99 +1281,6 @@ level of radioactivity is_proxy_for level of toxicity</obo:IAO_0000112>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_device -->
-
-    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_device">
-        <rdfs:label xml:lang="en">electricity generation device</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
-                <owl:someValuesFrom rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_device"/>
-        <obo:IAO_0000119 rdf:datatype="&xsd;anyURI">http://www.reegle.info/glossary/622/electricity-generation.htm</obo:IAO_0000119>
-        <obo:IAO_0000115 xml:lang="en">Electricity generation devices includes all technologies that turn some form of energy into useful electric energy.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell
-</obo:IAO_0000117>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
-        <rdfs:seeAlso rdf:resource="&reegle;622.rdf"/>
-    </owl:Class>
-    
-
-
-    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function -->
-
-    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function">
-        <rdfs:label xml:lang="en">electricity generation function</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function"/>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
-    </owl:Class>
-    
-
-
-    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_device -->
-
-    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_device">
-        <rdfs:label xml:lang="en">energy generation device</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
-                <owl:someValuesFrom rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000968"/>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
-    </owl:Class>
-    
-
-
-    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function -->
-
-    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#energy_generation_function">
-        <rdfs:label xml:lang="en">energy generation function</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Function"/>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
-    </owl:Class>
-    
-
-
-    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_device -->
-
-    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_device">
-        <rdfs:label xml:lang="en">photovoltaic conversion device</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
-                <owl:someValuesFrom rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_function"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_device"/>
-        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.reegle.info/glossary/39</rdfs:seeAlso>
-        <obo:IAO_0000115 xml:lang="en">A photovoltaic conversion device transforms sunlight directly into electrical energy.
-
-A solar cell or photovoltaic cell is a wide area electronic device that converts solar energy into electricity by the photovoltaic effect. Photovoltaics is the field of technology and research related to the application of solar cells as solar energy.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">photovoltaic cell</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">solar cell</obo:IAO_0000118>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
-        <obo:IAO_0000119 rdf:resource="&reegle;39.rdf"/>
-    </owl:Class>
-    
-
-
-    <!-- http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_function -->
-
-    <owl:Class rdf:about="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#photovoltaic_conversion_function">
-        <rdfs:label xml:lang="en">photovoltaic conversion function</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://oei-ontology.googlecode.com/svn/trunk/oei.owl#electricity_generation_function"/>
-        <obo:IAO_0000115 xml:lang="en">A function that converts solar energy into electricity by the photovoltaic effect.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
-    </owl:Class>
     
 
 
@@ -15858,6 +15765,99 @@ Manual editing of automatically recorded data in an anesthesia information manag
         <obo:IAO_0000115 xml:lang="en">A unit which represents a standard measurement occurrence of a process per unit time.</obo:IAO_0000115>
         <obo:IAO_0000111 xml:lang="en">rate unit</obo:IAO_0000111>
         <obo:IAO_0000412 rdf:resource="&obo;uo.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#electricity_generation_device -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#electricity_generation_device">
+        <rdfs:label xml:lang="en">electricity generation device</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/oei/devel/owl#electricity_generation_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#energy_generation_device"/>
+        <obo:IAO_0000119 rdf:datatype="&xsd;anyURI">http://www.reegle.info/glossary/622/electricity-generation.htm</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">Electricity generation devices includes all technologies that turn some form of energy into useful electric energy.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell
+</obo:IAO_0000117>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+        <rdfs:seeAlso rdf:resource="&reegle;622.rdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#electricity_generation_function -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#electricity_generation_function">
+        <rdfs:label xml:lang="en">electricity generation function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#energy_generation_function"/>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#energy_generation_device -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#energy_generation_device">
+        <rdfs:label xml:lang="en">energy generation device</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/oei/devel/owl#energy_generation_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000968"/>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#energy_generation_function -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#energy_generation_function">
+        <rdfs:label xml:lang="en">energy generation function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Function"/>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#photovoltaic_conversion_device -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#photovoltaic_conversion_device">
+        <rdfs:label xml:lang="en">photovoltaic conversion device</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/oei/devel/owl#photovoltaic_conversion_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#electricity_generation_device"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.reegle.info/glossary/39</rdfs:seeAlso>
+        <obo:IAO_0000115 xml:lang="en">A photovoltaic conversion device transforms sunlight directly into electrical energy.
+
+A solar cell or photovoltaic cell is a wide area electronic device that converts solar energy into electricity by the photovoltaic effect. Photovoltaics is the field of technology and research related to the application of solar cells as solar energy.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">photovoltaic cell</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">solar cell</obo:IAO_0000118>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000119 rdf:resource="&reegle;39.rdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#photovoltaic_conversion_function -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#photovoltaic_conversion_function">
+        <rdfs:label xml:lang="en">photovoltaic conversion function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#electricity_generation_function"/>
+        <obo:IAO_0000115 xml:lang="en">A function that converts solar energy into electricity by the photovoltaic effect.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
