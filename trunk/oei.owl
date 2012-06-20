@@ -35,7 +35,6 @@
         <dc:description xml:lang="en">The Ontology for Energy Investigations (OEI) is an effort to provide a resource for annotating investigations in Energy Informatics.</dc:description>
         <dc:creator xml:lang="en">Zhengkai Wu</dc:creator>
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
     
 
@@ -15810,10 +15809,26 @@ Manual editing of automatically recorded data in an anesthesia information manag
     
 
 
+    <!-- http://purl.org/oei/devel/owl#electricity_measure_function -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#electricity_measure_function">
+        <rdfs:label xml:lang="en">electricity measure function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000453"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/oei/devel/owl#electricity_meter -->
 
     <owl:Class rdf:about="http://purl.org/oei/devel/owl#electricity_meter">
         <rdfs:label xml:lang="en">electricity meter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/oei/devel/owl#electricity_measure_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000832"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
@@ -15850,7 +15865,7 @@ Manual editing of automatically recorded data in an anesthesia information manag
 
     <owl:Class rdf:about="http://purl.org/oei/devel/owl#energy_generation_function">
         <rdfs:label xml:lang="en">energy generation function</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Function"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000034"/>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
@@ -15964,10 +15979,26 @@ A solar cell or photovoltaic cell is a wide area electronic device that converts
     
 
 
+    <!-- http://purl.org/oei/devel/owl#thermal_measure_function -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#thermal_measure_function">
+        <rdfs:label xml:lang="en">thermal measure function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000453"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/oei/devel/owl#thermal_meter -->
 
     <owl:Class rdf:about="http://purl.org/oei/devel/owl#thermal_meter">
         <rdfs:label xml:lang="en">thermal meter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/oei/devel/owl#thermal_measure_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000832"/>
         <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell
 </obo:IAO_0000117>
