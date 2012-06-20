@@ -481,12 +481,12 @@ EquivalentTo: xsd:integer[&gt; 2151 , &lt;= 2300]
         <rdfs:domain rdf:resource="&obo;BFO_0000007"/>
         <owl:inverseOf rdf:resource="&obo;BFO_0000067"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000050"/>
             <rdf:Description rdf:about="&obo;BFO_0000066"/>
+            <rdf:Description rdf:about="&obo;BFO_0000050"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="&obo;BFO_0000066"/>
             <rdf:Description rdf:about="&obo;BFO_0000050"/>
+            <rdf:Description rdf:about="&obo;BFO_0000066"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -15769,6 +15769,16 @@ Manual editing of automatically recorded data in an anesthesia information manag
     
 
 
+    <!-- http://purl.org/oei/devel/owl#displacement_liquid_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#displacement_liquid_meter">
+        <rdfs:label xml:lang="en">displacement liquid meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#liquid_meter"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/oei/devel/owl#electricity_generation_device -->
 
     <owl:Class rdf:about="http://purl.org/oei/devel/owl#electricity_generation_device">
@@ -15784,7 +15794,7 @@ Manual editing of automatically recorded data in an anesthesia information manag
         <obo:IAO_0000115 xml:lang="en">Electricity generation devices includes all technologies that turn some form of energy into useful electric energy.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell
 </obo:IAO_0000117>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <rdfs:seeAlso rdf:resource="&reegle;622.rdf"/>
     </owl:Class>
     
@@ -15800,6 +15810,26 @@ Manual editing of automatically recorded data in an anesthesia information manag
     
 
 
+    <!-- http://purl.org/oei/devel/owl#electricity_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#electricity_meter">
+        <rdfs:label xml:lang="en">electricity meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000832"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#electromechanical_electricity_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#electromechanical_electricity_meter">
+        <rdfs:label xml:lang="en">electromechanical electricity meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#electricity_meter"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/oei/devel/owl#energy_generation_device -->
 
     <owl:Class rdf:about="http://purl.org/oei/devel/owl#energy_generation_device">
@@ -15811,7 +15841,7 @@ Manual editing of automatically recorded data in an anesthesia information manag
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000968"/>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -15822,6 +15852,58 @@ Manual editing of automatically recorded data in an anesthesia information manag
         <rdfs:label xml:lang="en">energy generation function</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Function"/>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#gas_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#gas_meter">
+        <rdfs:label xml:lang="en">gas meter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/oei/devel/owl#gas_volume_measure_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#volumetric_meter"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#gas_volume_measure_function -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#gas_volume_measure_function">
+        <rdfs:label xml:lang="en">gas volume measure function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#volume_measure_function"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#liquid_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#liquid_meter">
+        <rdfs:label xml:lang="en">liquid meter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/oei/devel/owl#liquid_volume_measure_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#volumetric_meter"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#liquid_volume_measure_function -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#liquid_volume_measure_function">
+        <rdfs:label xml:lang="en">liquid volume measure function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#volume_measure_function"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -15844,7 +15926,7 @@ A solar cell or photovoltaic cell is a wide area electronic device that converts
         <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">photovoltaic cell</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">solar cell</obo:IAO_0000118>
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
         <obo:IAO_0000119 rdf:resource="&reegle;39.rdf"/>
     </owl:Class>
     
@@ -15858,6 +15940,78 @@ A solar cell or photovoltaic cell is a wide area electronic device that converts
         <obo:IAO_0000115 xml:lang="en">A function that converts solar energy into electricity by the photovoltaic effect.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell</obo:IAO_0000117>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#smart_electrical_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#smart_electrical_meter">
+        <rdfs:label xml:lang="en">smart electrical meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#electricity_meter"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#thermal_mass_flow_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#thermal_mass_flow_meter">
+        <rdfs:label xml:lang="en">thermal mass flow meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#thermal_meter"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#thermal_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#thermal_meter">
+        <rdfs:label xml:lang="en">thermal meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000832"/>
+        <obo:IAO_0000117 xml:lang="en">Michael E. Cotterell
+</obo:IAO_0000117>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#velocity_liquid_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#velocity_liquid_meter">
+        <rdfs:label xml:lang="en">velocity liquid meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/oei/devel/owl#liquid_meter"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#volume_measure_function -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#volume_measure_function">
+        <rdfs:label xml:lang="en">volume measure function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000453"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/oei/devel/owl#volumetric_meter -->
+
+    <owl:Class rdf:about="http://purl.org/oei/devel/owl#volumetric_meter">
+        <rdfs:label xml:lang="en">volumetric meter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/oei/devel/owl#volume_measure_function"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000832"/>
+        <obo:IAO_0000119 rdf:datatype="&xsd;anyURI">http://en.wikipedia.org/wiki/Displacement_Volumetric_Meter</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A device which measures total volume. 
+
+It can operate on the principle of a fluid or gas sweeping out a fixed calibrated volume, which produces a rotation of a calibrated gauge. By maintaining constant conditions and taking readings over a prescribed period the flow rate can be calculated for the specific operating conditions. The instrument essentially measures total volume.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
