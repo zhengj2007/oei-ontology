@@ -3,6 +3,6 @@
     <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/muo/muo#" uri="http://purl.oclc.org/NET/muo/muo-vocab.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.ifomis.org/bfo/1.1" uri="http://www.ifomis.org/bfo/owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1340206767621" name="http://oei-ontology.googlecode.com/svn/trunk/oei.owl" uri="oei.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1340211433359" name="http://purl.org/oei/devel/owl" uri="oei.owl"/>
     </group>
 </catalog>
